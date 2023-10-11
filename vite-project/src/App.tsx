@@ -1,7 +1,7 @@
 import "./App.css";
 import { edenTreaty } from "@elysiajs/eden";
 
-import { App } from "../../Elysia/src/server.ts";
+import { App } from "../../Elysia/src/index";
 
 const app = edenTreaty<App>("http://localhost:8000");
 

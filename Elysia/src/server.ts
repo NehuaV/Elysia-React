@@ -9,5 +9,3 @@ const app = new Elysia()
   .use(posts);
 
 export default app;
-
-export type App = typeof app;
