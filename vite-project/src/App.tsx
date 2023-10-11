@@ -6,7 +6,7 @@ import "./App.css";
 const app = edenTreaty<App>("http://localhost:8000");
 
 function AppReact() {
-  const [res, setRes] = useState<{ name: string }[]>([]); // provide a default value of an empty array
+  const [res, setRes] = useState<{ name: string }[]>([]);
 
   useEffect(() => {
     fetchData();
