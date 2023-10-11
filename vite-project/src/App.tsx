@@ -1,14 +1,19 @@
+import React from "react";
 import "./App.css";
 import { edenTreaty } from "@elysiajs/eden";
 
-import { App } from "../../Elysia/src/index";
+import type { App } from "../../Elysia/src/index";
 
 const app = edenTreaty<App>("http://localhost:8000");
 
 function AppReact() {
-  const { data, error } = app.get();
+  async function data() {
+    const data = await app.users[""].get();
+    console.log(data);
+  }
 
-  console.log(data, error);
+  data();
+
   return <>Hallo</>;
 }
 

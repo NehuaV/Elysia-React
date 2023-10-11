@@ -1,8 +1,10 @@
 import { Elysia } from "elysia";
-import users from "@/controllers/users";
-import posts from "@/controllers/posts";
+import { cors } from "@elysiajs/cors";
+import users from "./handlers/users";
+import posts from "./handlers/posts";
 
 const app = new Elysia()
+  .use(cors())
   .get("/", () => "Hello Elysia")
   .post("/", () => "Post Elysia")
   .use(users)
