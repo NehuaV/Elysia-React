@@ -1,7 +1,15 @@
 import "./App.css";
+import { edenTreaty } from "@elysiajs/eden";
 
-function App() {
+import { App } from "../../Elysia/src/server.ts";
+
+const app = edenTreaty<App>("http://localhost:8000");
+
+function AppReact() {
+  const { data, error } = app.get();
+
+  console.log(data, error);
   return <>Hallo</>;
 }
 
-export default App;
+export default AppReact;
