@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { edenTreaty } from "@elysiajs/eden";
 import type { App } from "../../Elysia/src/index";
 import "./App.css";
